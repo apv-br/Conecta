@@ -1,0 +1,149 @@
+
+/*  ---------------  Traditional way  -----------------
+
+body { background-color: #1e90ff; }
+
+h2 { border-bottom: 2px solid #1e90ff; }
+
+.container {
+  color: #1e90ff;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+*/
+
+
+/*  ---------------  Use o var() -----------------
+
+var(--name, value)
+name = required. The variable name (must start with two dashes)
+value = optional. The fallback value (used if the variable is not found)
+
+*/
+
+:root {
+  --blue: #6495ed;
+  --light_white: #fafafa;
+  --light_blue: #dfe6f2;
+  --navbar_color: blue
+}
+
+/*  ---------------------------  Home page ----------------------------- */
+
+.collapse {
+    background-color: var(--light_white);
+    font-size: 20px;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.nav-item {
+   margin-right: 40px;
+}
+
+.containers {
+  padding: 15px;
+}
+
+.container_header {
+  padding: 150px;
+  background-color: var(--light_blue);
+  background-image: url("fotos/networking-g593c31333_1920.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: #FFFFFF;
+  font-size: 60px;
+
+}
+
+.container_o_que_fazemos {
+  background-color: var(--light_white);
+  padding: 80px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.container_quem_somos {
+  background-color: var(--light_blue);
+  padding: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container_nossas_publicacoes {
+  background-color: var(--light_white);
+  padding: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container_fale_conosco {
+  background-color: var(--light_blue);
+  padding: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text_containers{
+    text-align: left;
+    min-height: 200px;
+    width: 500px;
+}
+
+/*  ---------------------------  O que fazemos page ----------------------------- */
+
+
+.header_oquefazemos {
+  padding: 80px;
+  font-size: 60px;
+  background-color: var(--light_blue);
+  background-image: url("fotos/laptop-g4ffb9d3da_1920.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: #FFFFFF;
+}
+
+
+/*  ---------------------------  Quem somos page ----------------------------- */
+
+.header_quemsomos {
+  padding: 80px;
+  font-size: 60px;
+  background-color: var(--light_blue);
+  background-image: url("fotos/people-g3be3b36c7_1920.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: #FFFFFF;
+}
+
+
+/*  ---------------------------  Nossas publicacoes page ----------------------------- */
+
+.header_nossaspublicacoes {
+  padding: 80px;
+  font-size: 60px;
+  background-color: var(--light_blue);
+  background-image: url("fotos/post-g17d539517_1920.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: #FFFFFF;
+}
+
+/*  ---------------------------  Fale conosco page ----------------------------- */
+
+.header_faleconosco {
+  padding: 80px;
+  font-size: 60px;
+  background-color: var(--light_blue);
+  background-image: url("fotos/contact-us-g988677dd3_1920.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: #FFFFFF;
+}
