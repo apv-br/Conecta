@@ -24,13 +24,13 @@ def faleconosco():
 
 # ---------- posts --------------
 
-@app.route("/post_page_2")
+@app.route("/nossaspublicacoes/2")
 def post_2():
     post_id = "2"
     response = make_response(render_template("post_page.html", post=post_id))
     return response
 
-@app.route("/post_page_1")
+@app.route("/nossaspublicacoes/1")
 def post_1():
     post_id = "1"
     response = make_response(render_template("post_page.html", post=post_id))
