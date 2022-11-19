@@ -49,21 +49,23 @@ value = optional. The fallback value (used if the variable is not found)
 .container_header {
   padding: 150px;
   background-color: var(--light_blue);
-  background-image: url("fotos/networking-g593c31333_1920.jpg");
+  background-image: url("background_img/panoramica_serra_sintra.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  color: #FFFFFF;
-  font-size: 60px;
-
 }
+
+.container_header > H1 {
+  color: #FFFFFF;
+  font-size: xxx-large;
+}
+
 
 .container_o_que_fazemos {
   background-color: var(--light_white);
   padding: 80px;
   display: flex;
   justify-content: space-around;
-
 }
 
 .container_quem_somos {
@@ -95,16 +97,33 @@ value = optional. The fallback value (used if the variable is not found)
 
 /*  ---------------------------  O que fazemos page ----------------------------- */
 
-
 .header_oquefazemos {
   padding: 80px;
   font-size: 60px;
   background-color: var(--light_blue);
-  background-image: url("fotos/laptop-g4ffb9d3da_1920.jpg");
+  background-image: url("background_img/laptop-g4ffb9d3da_1920.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: #FFFFFF;
+}
+
+.flex_container_o_que_fazemos {
+  background-color: var(--light_white);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.flex_container_o_que_fazemos > div {
+  /* width: 350px;
+     height: 400px;
+   */
+  width:fit-content;
+  height:fit-content;
+  margin: 10px;
+  background-color: #f1f1f1;
 }
 
 
@@ -114,13 +133,41 @@ value = optional. The fallback value (used if the variable is not found)
   padding: 80px;
   font-size: 60px;
   background-color: var(--light_blue);
-  background-image: url("fotos/people-g3be3b36c7_1920.jpg");
+  background-image: url("background_img/people-g3be3b36c7_1920.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: #FFFFFF;
 }
 
+.flex_container_quem_somos {
+  background-color: var(--light_white);
+  padding: 20px;
+}
+
+.quem_somos_texto {
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.quem_somos_perfis {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--light_blue);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.quem_somos_perfil {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+.quem_somos_perfil > div {
+  margin-right: 5px;
+}
 
 /*  ---------------------------  Nossas publicacoes page ----------------------------- */
 
@@ -128,22 +175,110 @@ value = optional. The fallback value (used if the variable is not found)
   padding: 80px;
   font-size: 60px;
   background-color: var(--light_blue);
-  background-image: url("fotos/post-g17d539517_1920.jpg");
+  background-image: url("background_img/post-g17d539517_1920.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: #FFFFFF;
 }
+
+.flex_container_nossas_publicacoes {
+  background-color: var(--light_white);
+}
+
+.post_container {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.post_container > div {
+    margin-right: 10px;
+}
+
+.link_to_post:link {
+  color: black;
+  text-decoration: none;
+}
+
+.link_to_post:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.link_to_post:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+.link_to_post:active {
+  color: blue;
+  text-decoration: none;
+}
+
 
 /*  ---------------------------  Fale conosco page ----------------------------- */
 
-.header_faleconosco {
+.header_faleconosco_page {
   padding: 80px;
   font-size: 60px;
   background-color: var(--light_blue);
-  background-image: url("fotos/contact-us-g988677dd3_1920.jpg");
+  background-image: url("background_img/contact-us-g988677dd3_1920.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   color: #FFFFFF;
 }
+
+.container_fale_conosco_page {
+   background-color: white;
+   padding: 80px;
+   display: flex;
+   justify-content: space-around;
+}
+.container_fale_conosco_page > div {
+    margin-right: 5px;
+}
+
+
+/*  ---------------------------  página de cada publicação ----------------------------- */
+
+.container_publicacao{
+  background-color: var(--light_white);
+  border: groove;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  width: 1000px;
+}
+
+.header_publicacao {
+   text-align:center;
+   margin-top: 20px;
+}
+
+.foto_publicacao {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.texto_publicacao {
+    display: block;
+    padding-top: 20px;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-bottom: 20px;
+    width: 1000px;
+    height: 1300px;
+}
+
+.ver_todos_posts {
+  display: block;
+  margin-top: 10px;
+  text-align:center;
+}
+

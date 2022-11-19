@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nome do post - configurar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/sitestyle.css">
+</head>
+<body>
+
+
+<!-- Included Popper and  JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper. -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+
+    <nav class="navbar navbar-expand-lg bg-light" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="static/conectalogotipo/LogotipoConecta.png" width="80" height="80" >
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/oquefazemos">O que fazemos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/quemsomos">Quem somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/nossaspublicacoes">Nossas publicações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faleconosco">Fale conosco</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header_nossaspublicacoes">
+         <h1>Nossas publicações</h1>
+    </header>
+
+    <a href="/nossaspublicacoes" class="ver_todos_posts" >Ver todos...</a>
+
+    <div class="container_publicacao">
+
+        {% block content %}
+
+            {% if post == "1" %}
+              <div class="header_publicacao">
+                  <h2> Um pouco da nossa história... </h2>
+                  <h5> Jul 30, 2018 </h5>
+              </div>
+              <img class="foto_publicacao" src="static/img/zermatt.jpeg" width="525" height="375">
+              <iframe class="texto_publicacao" src="static/posts/post1_nossahistoria.html" > </iframe>
+
+
+            {% elif post == "2" %}
+              <div class="header_publicacao">
+                  <h2> Mudar para Portugal: O que levar em conta </h2>
+                  <h5> Aug 16, 2018 </h5>
+              </div>
+              <img class="foto_publicacao" src="static/img/cascais-portugal.jpeg" width="525" height="375">
+              <iframe class="texto_publicacao" src="static/posts/post2_mudancaportugal.html" > </iframe>
+
+            {% endif %}
+
+        {% endblock content %}
+
+    </div>
+
+<!--    <script type="text/javascript">
+
+        // Obtém o número do post a partir da variável
+        var queryParams = new URLSearchParams(window.location.search);
+        var post_id = queryParams.get("post_number");
+
+        if (post_id === "2") {
+           document.getElementById("id_header_post").innerHTML = "Mudar para Portugal: O que levar em conta";
+           document.getElementById("id_date_post").innerHTML = "Aug 16, 2018";
+           document.getElementById("id_photo_post").src = "static/img/cascais-portugal.jpeg"
+           document.getElementById("id_text_post").src = "posts/mudar-portugal"
+        } else if (post_id === "1") {
+           document.getElementById("id_header_post").innerHTML = "Um pouco da nossa história...";
+           document.getElementById("id_date_post").innerHTML = "Jul 30, 2018";
+           document.getElementById("id_photo_post").src = "static/img/zermatt.jpeg"
+           document.getElementById("id_text_post").src = "/posts/nossa-historia"
+        }
+
+    </script>-->
+
+
+</body>
+</html>
