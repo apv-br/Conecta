@@ -200,6 +200,7 @@ value = optional. The fallback value (used if the variable is not found)
   min-width: 350px;
   max-width: 800px;
   height: 350px;
+  padding-top: 10px;
 }
 
 /*
