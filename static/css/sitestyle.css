@@ -96,10 +96,10 @@ value = optional. The fallback value (used if the variable is not found)
 }
 
 .text_containers-index{
-    text-align: left;
+    text-align: center;
     padding: 10px;
     min-height: 200px;
-    min-width: 400px;
+    min-width: 350px;
     max-width: 600px;
 }
 
@@ -143,12 +143,12 @@ value = optional. The fallback value (used if the variable is not found)
 
 .flex_items_o_que_fazemos {
 
-  flex-shrink: 0; /* do not let the flex items shrink...*/
+  /* flex-shrink: 0;  */ /* do not let the flex items shrink...*/
   /*flex-grow: 1;*/
   margin: 10px;
   /*border: 10px solid black;*/
   padding: 10px;
-  width: 450px;
+  max-width: 450px;
   height: 350px;
   background-color: #f1f1f1;
   /*  width:fit-content;
@@ -176,6 +176,8 @@ value = optional. The fallback value (used if the variable is not found)
 .quem_somos_texto {
   background-color: #f1f1f1;
   padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-bottom: 20px;
 }
 
@@ -183,6 +185,8 @@ value = optional. The fallback value (used if the variable is not found)
 .quem_somos_perfis {
   background-color: var(--light_blue);
   padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -193,9 +197,7 @@ value = optional. The fallback value (used if the variable is not found)
 
 /* Flex item */
 .quem_somos_perfil {
-  margin: 15px;
-  padding: 10px;
-  min-width: 400px;
+  min-width: 350px;
   max-width: 800px;
   height: 350px;
 }
@@ -220,7 +222,7 @@ value = optional. The fallback value (used if the variable is not found)
   color: #FFFFFF;
 }
 
-.flex_container_nossas_publicacoes {
+.container_nossas_publicacoes {
   background-color: var(--light_white);
 }
 
@@ -229,12 +231,26 @@ value = optional. The fallback value (used if the variable is not found)
   padding: 20px;
   margin-top: 20px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
+.post_text_container {
+    padding-left: 10px;
+    max-width: 900px;
+    min-width: 350px;
+}
+
+.post_image_container {
+
+}
+
+
+/*
 .post_container > div {
     margin-right: 10px;
 }
+*/
 
 .link_to_post:link {
   color: black;
