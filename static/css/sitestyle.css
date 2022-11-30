@@ -31,6 +31,7 @@ value = optional. The fallback value (used if the variable is not found)
 
 /*  ---------------------------  Home page ----------------------------- */
 
+/* ------- Menu  ------- */
 .collapse {
     background-color: var(--light_white);
     font-size: 20px;
@@ -42,12 +43,13 @@ value = optional. The fallback value (used if the variable is not found)
    margin-right: 40px;
 }
 
-.containers {
+/* ------- Conjunto de containers da home page  ------- */
+.containers-index {
   padding: 15px;
 }
 
-.container_header {
-  padding: 150px;
+.container-index_header {
+  padding: 10%;
   background-color: var(--light_blue);
   background-image: url("background_img/panoramica_serra_sintra.jpg");
   background-position: center; /* Center the image */
@@ -55,44 +57,54 @@ value = optional. The fallback value (used if the variable is not found)
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
-.container_header > H1 {
+.container-index_header > H1 {
   color: #FFFFFF;
   font-size: xxx-large;
+  text-align: center;
 }
 
-
-.container_o_que_fazemos {
+.container-index_o_que_fazemos {
   background-color: var(--light_white);
   padding: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.container_quem_somos {
+.container-index_quem_somos {
   background-color: var(--light_blue);
   padding: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.container_nossas_publicacoes {
+.container-index_nossas_publicacoes {
   background-color: var(--light_white);
   padding: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.container_fale_conosco {
+.container-index_fale_conosco {
   background-color: var(--light_blue);
   padding: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.text_containers{
+.text_containers-index{
     text-align: left;
+    padding: 10px;
     min-height: 200px;
-    width: 500px;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.image_containers-index{
+
 }
 
 /*  ---------------------------  O que fazemos page ----------------------------- */
@@ -109,23 +121,39 @@ value = optional. The fallback value (used if the variable is not found)
 }
 
 .flex_container_o_que_fazemos {
+
   background-color: var(--light_white);
-  padding: 20px;
+  margin: 5px;
+  padding: 5px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-
+  align-items: center;
 }
 
-.flex_container_o_que_fazemos > div {
-  /* width: 350px;
-     height: 400px;
-   */
-  width:fit-content;
-  height:fit-content;
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+/*
+@media (max-width: 970px) {
+  .flex_container_o_que_fazemos {
+    flex-direction: column;
+  }
+}
+*/
+
+.flex_items_o_que_fazemos {
+
+  flex-shrink: 0; /* do not let the flex items shrink...*/
+  /*flex-grow: 1;*/
   margin: 10px;
+  /*border: 10px solid black;*/
+  padding: 10px;
+  width: 450px;
+  height: 350px;
   background-color: #f1f1f1;
+  /*  width:fit-content;
+  height:fit-content;*/
 }
-
 
 /*  ---------------------------  Quem somos page ----------------------------- */
 
@@ -140,7 +168,7 @@ value = optional. The fallback value (used if the variable is not found)
   color: #FFFFFF;
 }
 
-.flex_container_quem_somos {
+.container_quem_somos {
   background-color: var(--light_white);
   padding: 20px;
 }
@@ -151,23 +179,33 @@ value = optional. The fallback value (used if the variable is not found)
   padding-bottom: 20px;
 }
 
+/* Flex container */
 .quem_somos_perfis {
-  display: flex;
-  justify-content: space-around;
   background-color: var(--light_blue);
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.quem_somos_perfil {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
-  margin: 15px;
+
 }
 
+/* Flex item */
+.quem_somos_perfil {
+  margin: 15px;
+  padding: 10px;
+  min-width: 400px;
+  max-width: 800px;
+  height: 350px;
+}
+
+/*
 .quem_somos_perfil > div {
   margin-right: 5px;
 }
+*/
+
 
 /*  ---------------------------  Nossas publicacoes page ----------------------------- */
 
@@ -233,13 +271,22 @@ value = optional. The fallback value (used if the variable is not found)
 }
 
 .container_fale_conosco_page {
-   background-color: white;
-   padding: 80px;
-   display: flex;
-   justify-content: space-around;
+  background-color: white;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-.container_fale_conosco_page > div {
-    margin-right: 5px;
+
+.container_item_fale_conosco {
+  /* margin-right: 5px; */
+  padding: 10px;
+  width: 300px;
+  height: 150px;
+  /*flex-shrink: 0;*/
 }
 
 
